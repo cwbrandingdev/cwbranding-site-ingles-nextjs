@@ -23,11 +23,25 @@ export const portfolio: PortfolioProject[] = [
     mobileImage: "/portfolio/sensora-home-mobile.webp",
   },
   {
+    name: "Márcio Simioni",
+    url: "https://marciosimioni.com.br/empresas",
+    type: "site",
+    desktopImage: "/portfolio/marcio-simioni-desktop.webp",
+    mobileImage: "/portfolio/marcio-simioni-mobile.webp",
+  },
+  {
     name: "NanoSkinBio",
-    url: "https://nanoskinbiobrasil.com.br/index.html",
+    url: "https://www.nanoskinbiobrasil.com.br/",
     type: "landing-page",
     desktopImage: "/portfolio/nanoskinbio-desktop.webp",
     mobileImage: "/portfolio/nanoskinbio-mobile.webp",
+  },
+  {
+    name: "Monica Gobbeti",
+    url: "https://www.monicagobbeti.com.br/",
+    type: "landing-page",
+    desktopImage: "/portfolio/monica-gobbeti-desktop.webp",
+    mobileImage: "/portfolio/monica-gobbeti-mobile.webp",
   },
 ];
 
