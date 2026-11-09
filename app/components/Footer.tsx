@@ -97,6 +97,7 @@ export function Footer() {
                     {t.navClients}
                   </a>
                 </li>
+                {/* Plans hidden for now
                 <li>
                   <a
                     href="/#plans"
@@ -104,7 +105,7 @@ export function Footer() {
                   >
                     {t.navPlans}
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     href="/#faq"

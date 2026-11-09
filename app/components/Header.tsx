@@ -16,7 +16,7 @@ export function Header() {
   const navItems = [
     { href: "/#services", label: t.services },
     { href: "/#about", label: t.about },
-    { href: "/#plans", label: t.navPlans },
+    // { href: "/#plans", label: t.navPlans },
     // { href: "/blog", label: t.navBlog },
   ];
 

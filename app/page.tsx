@@ -7,7 +7,7 @@ import { Hero } from "./components/Hero";
 import { JsonLd } from "./components/JsonLd";
 import { Marquee } from "./components/Marquee";
 import { PartnersSection } from "./components/PartnerSection";
-import PricingSection from "./components/PricingSection";
+// import PricingSection from "./components/PricingSection";
 import { ContactSection } from "./components/ContactSection";
 import { ServicesSection } from "./components/ServiceSection";
 import { SpaceSection } from "./components/SpaceSection";
@@ -37,7 +37,8 @@ export default function Home() {
       <Marquee />
       <SpaceSection />
       <PartnersSection />
-      <PricingSection />
+      {/* Plans hidden for now */}
+      {/* <PricingSection /> */}
       <ContactSection />
       {/* <BlogSection posts={latestPosts} /> */}
       <FaqSection />

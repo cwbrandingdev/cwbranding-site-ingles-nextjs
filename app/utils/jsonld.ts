@@ -37,7 +37,7 @@ export const organizationJsonLd = {
   taxID: site.cnpj,
   telephone: site.contact.phone,
   email: site.contact.email,
-  priceRange: site.priceRange,
+  // priceRange: site.priceRange,
   address,
   location: curitibaLocation,
   geo: {
@@ -57,7 +57,7 @@ export const organizationJsonLd = {
     areaServed: ["CA", "BR"],
     availableLanguage: ["English"],
   },
-  hasOfferCatalog: {
+ /*  hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "CWBranding plans",
     itemListElement: translations.EN.plans.map((plan) => ({
@@ -70,10 +70,10 @@ export const organizationJsonLd = {
         "@type": "UnitPriceSpecification",
         price: plan.price.replace(".", ""),
         priceCurrency: "CAD",
-        unitText: "MONTH",
-      },
+        unitText: "MONTH", */
+  /*     },
     })),
-  },
+  }, */
   makesOffer: services.map((service) => ({
     "@type": "Offer",
     itemOffered: {

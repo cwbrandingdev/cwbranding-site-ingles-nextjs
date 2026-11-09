@@ -416,11 +416,12 @@ export const translations = {
         answer:
           "Social media, visual identity, paid traffic management, landing pages, marketing advisory, photoshoots, graphic materials, and event coverage.",
       },
-      {
-        question: "How much do CWBranding plans cost?",
-        answer:
-          "Monthly plans start at $3,599 CAD (Essential — 45 pieces of content, 30 Stories, 15 feed posts, no paid traffic), $5,699 (Positioning), $7,999 (Scale), and $9,999 (Leadership). Each plan's full scope is listed in the pricing section.",
-      },
+      // Plans hidden for now
+      // {
+      //   question: "How much do CWBranding plans cost?",
+      //   answer:
+      //     "Monthly plans start at $3,599 CAD (Essential — 45 pieces of content, 30 Stories, 15 feed posts, no paid traffic), $5,699 (Positioning), $7,999 (Scale), and $9,999 (Leadership). Each plan's full scope is listed in the pricing section.",
+      // },
       {
         question: "How do I hire CWBranding?",
         answer:
