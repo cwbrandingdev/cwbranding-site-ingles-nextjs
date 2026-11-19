@@ -94,6 +94,13 @@ export default function RootLayout({
       className={cn("font-sans", inter.variable, fraunces.variable)}
     >
       <head>
+        {/* Poster do hero: preenche o viewport antes do MP4 decodificar. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/cwbranding/hero/hero-poster.webp"
+          type="image/webp"
+        />
         {/* Abre a conexão com o ImageKit (imagens do blog) antes de as imagens serem pedidas. */}
         <link rel="preconnect" href="https://ik.imagekit.io" />
         <Script id="google-tag-manager" strategy="afterInteractive">

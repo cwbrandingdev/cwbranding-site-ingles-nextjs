@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 
 export function Hero() {
   const { t } = useLanguage();
+  const [videoReady, setVideoReady] = useState(false);
 
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -36,26 +37,35 @@ export function Hero() {
       ref={heroRef}
       className="relative h-[100vh] w-full overflow-hidden bg-[var(--brand-ink)]"
     >
+      {/* Poster estático sob o vídeo: preenche o hero enquanto o MP4 bufferiza. */}
+      <img
+        src="/cwbranding/hero/hero-poster.webp"
+        alt=""
+        aria-hidden
+        fetchPriority="high"
+        decoding="async"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      />
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         poster="/cwbranding/hero/hero-poster.webp"
         aria-hidden
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        onLoadedData={() => setVideoReady(true)}
+        onCanPlay={() => setVideoReady(true)}
+        className={`absolute top-0 left-0 w-full h-full object-cover z-[1] transition-opacity duration-500 ease-out ${
+          videoReady ? "opacity-100" : "opacity-0"
+        }`}
       >
-        {/* O navegador usa a primeira fonte que suporta: celular → 540p;
-            desktop → AV1 (menor) ou H.264 (compatível). Ver public/cwbranding/hero. */}
+        {/* Celular → hero-mobile; desktop → H.264. */}
         <source
           src="/cwbranding/hero/hero-mobile.mp4"
           type='video/mp4; codecs="avc1.64001F"'
           media="(max-width: 767px)"
-        />
-        <source
-          src="/cwbranding/hero/hero-desktop.webm"
-          type='video/webm; codecs="av01.0.05M.10"'
         />
         <source
           src="/cwbranding/hero/hero-desktop.mp4"
