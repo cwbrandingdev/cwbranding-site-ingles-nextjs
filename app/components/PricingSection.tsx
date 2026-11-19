@@ -11,7 +11,10 @@ export default function PricingSection() {
   const plans = t.plans || [];
 
   return (
-    <section id="plans" className="scroll-mt-16 bg-[#EBF5F5] py-16 px-6 md:px-12">
+    <section
+      id="plans"
+      className="scroll-mt-16 bg-[#EBF5F5] py-16 px-6 md:px-12"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display tracking-tight text-[#004d4c]">
@@ -56,7 +59,6 @@ export default function PricingSection() {
                   >
                     {plan.description}
                   </p>
-                 
 
                   {"subHeader" in plan && plan.subHeader && (
                     <p className="text-xs italic text-[#E8C39E] mb-4">
@@ -90,26 +92,6 @@ export default function PricingSection() {
                 </div>
 
                 <div>
-                  <div className="mb-6">
-                    <div className="flex items-baseline">
-                      <span className="text-lg font-light font-display text-[#E8C39E]">
-                        ${" "}
-                      </span>
-
-                      <span className="text-4xl md:text-5xl font-display tracking-tight text-[#E8C39E]">
-                        {plan.price}
-                      </span>
-
-                      <span
-                        className={`text-xs ml-2 ${
-                          highlighted ? "text-white/60" : "opacity-60"
-                        }`}
-                      >
-                        {t.pricingPeriod}
-                      </span>
-                    </div>
-                  </div>
-
                   <Link
                     href={contact.formHref}
                     className={`w-full py-4 text-center block text-xs uppercase tracking-widest transition-all duration-300 border font-semibold ${
